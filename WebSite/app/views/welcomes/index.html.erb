@@ -273,7 +273,7 @@
 	function imageload () {
 	
 	  	              //Initial Background image setup
-	  	image.css('background-image', 'url(/assets/phone.jpg)');
+	  	image.css('background-image', "url(<%= image_path('phone.jpg') %>)");
 	  	              //Change image at regular intervals
 	  	setInterval(function(){  
 	  	 image.fadeOut(1000, function () {
