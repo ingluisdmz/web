@@ -1,0 +1,496 @@
+<% content_for :navbar do %>
+    <%= render 'layouts/nav_bar' %></div>
+<% end %>
+
+<div class="row-fluid first_page_index" id="index_for_page">
+	<div style="position:absolute;width:100%;height:100%" id="page_load">
+	</div>
+	<div class="container">
+		<div class="row-fluid" style="margin-top:3em;">
+			<div class="col-md-6 ">
+				<div class="delay_package" style="display:none">
+					<h1 class="row-fluid">
+						Sitio web 
+					</h1>
+					<h3>
+						<span class="from_price_package">Desde </span> <span class="price">$3500.00 mx</span>
+					</h3>
+					<div class="row-fluid">
+						Incluye:
+					</div>
+					<div class="row-fluid">
+						<ul>
+							<li class="delay_text_package_1 hide_div dont_list_style">
+								Sitio multiplataforma
+								Tablets,pc,celulares,ipad,etc..
+							</li>
+							<li class="delay_text_package_2 hide_div dont_list_style">
+								Redes Sociales
+							</li>
+							<li class="delay_text_package_3 hide_div dont_list_style">
+								Hasta 100 Correos empresariales
+							</li>
+							<li class="delay_text_package_4 hide_div dont_list_style">
+								Google maps
+							</li>
+							<li class="delay_text_package_5 hide_div dont_list_style">
+								Dominio y Hosting por 1 año
+							</li>
+
+							<li class="delay_text_package_6 hide_div dont_list_style">
+								Ranking en Buscadores (google,yahoo,etc.)
+							</li>
+
+							<li class="delay_text_package_7 hide_div dont_list_style">
+								Garantia de Satisfaccion de Cliente por 30 dias
+							</li>
+
+							<li class="delay_text_package_8 hide_div dont_list_style">
+								Diseño personalizado (Opcional)
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 text-about">
+				
+				<div class="row-fluid" style="margin-bottom:2em;text-allign:center">
+					<div class="col-md-1 btn_change_text btn_change_text_1" onclick="ChangeText(1)">
+					</div>
+					<div class="col-md-1 btn_change_text btn_change_text_2" onclick="ChangeText(2)">
+					</div>
+					<div class="col-md-1 btn_change_text btn_change_text_3" onclick="ChangeText(3)">
+					</div>
+					<div class="col-md-1 btn_change_text btn_change_text_4" onclick="ChangeText(4)">
+					</div>
+					<div class="col-md-1 btn_change_text btn_change_text_5" onclick="ChangeText(5)">
+					</div>
+				</div>
+
+				<div class="row-fluid" id="text_change">
+					<h1>Creacion de su Sitio Web </h1>
+
+					El primer paso para rentabilizar tu sitio web es reflexionar sobre lo que esperas de él y
+					definir su propósito.
+					En el99% de las ocasiones un sitio web es una herramienta para cumplir los objetivos
+					de negocio, es decir:
+					
+					<ul>
+						<li>Aumentar las ventas.</li>
+						<li>Reducir los costes.</li>
+						<li>Incrementar la satisfacción del cliente..</li>
+					</ul>
+				
+					Por lo tanto, los objetivos de tu sitio web deberían estar relacionados, cómo mínimo, con
+					uno de ellos. 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row-fluid " id="second_page">
+	<div class="container" id="content_second_page">
+		<div class="row-fluid">
+			<h1 class="second_text_work_slapsh" style="text-transform:uppercase"> Somos la opcion confiable </h1>
+		</div>
+		<div class="row-fluid slapsh_border">
+			
+		</div>
+	</div>
+</div>
+
+<div id="three_page">
+	<div class="container" style="height:100%">
+		<div class="row-fluid" style="height:100%">
+			<div class="col-md-6" id="content_div_three_page" >
+				<div class="card-container">
+				  <div class="card">
+				    <div class="side">
+				    	<h1 class="row-fluid">
+				    		Permitenos entrar en contacto con usted, pregunte por su cotizacion, por su proyecto, precios de servicios freelance para soporte o cualquier tema relacionado con atencion a clientes.
+				    	</h1>
+				    	<h1 class="row-fluid">
+				    		<button class="col-md-offset-1 col-md-10 btn" id="btn_contact_form">Contactar ahora</button>
+				    	</h1>
+				    </div>
+				    <div class="side back">
+				    	<div class="row-fluid">
+				    		<h4>Porfavor, rellene el siguiente formulario de contacto</h4>
+				    	</div>
+			    		<%= simple_form_for(@contact_sites,:url => welcomes_path,:remote => true,:format => :json, :html => {:"data-parsley-validate" => 'true', :multipart => true, :id => "contact_form",:class => "row-fluid"}) do |f| %>
+
+								<div class="col-md-6">
+								   	<%= f.input :first_name,:required => true, label: false, placeholder: 'NOMBRE', input_html: { class: 'input-contact col-md-12', :"parsley-maxlength" => "60" } %>
+								</div>
+								
+								<div class="col-md-6">
+							   	<%= f.input :last_name, label: false,:required => true, placeholder: 'Apellido', input_html: { class: 'input-contact col-md-12', :"parsley-maxlength" => "30" } %>
+							   	</div>
+
+						   		<div class="col-md-6">
+									<%= f.input :email, label: false, placeholder: 'Correo Electronico', input_html: { class: 'input-contact col-md-12', required: true, :"parsley-maxlength" => "30" } %>
+								</div>
+
+								<div class="col-md-6">
+							   		<%= f.input :company_name, label: false, placeholder: 'Empresa', input_html: { class: 'input-contact col-md-12', required: true, :"parsley-maxlength" => "20" } %>
+							    </div>
+
+							    <div class="col-md-6">
+							   		<%= f.input :phone_number, label: false, placeholder: 'Numero Tel', input_html: { class: 'input-contact col-md-12', required: true, :"parsley-maxlength" => "20",:type =>"tel" } %>
+							   	</div>
+
+							   	<div class="col-md-6">
+							   		<select name="contact_site[type_contact_id]" class="select-contact col-md-12">
+							   			<% @type_contacts.each do |p| %>
+							   				<option value="<%= p.id %>"><%= p.name %></option>
+							   			<% end %>
+							   		</select>
+							   	</div>
+
+							   	<div class="row-fluid">
+						    		<h5>Escriba en el siguiente cuadro su duda y nos pondremos en contacto con usted en un maximo de 24hrs</h5>
+						    	</div>
+
+								<div class="row-fluid" style="padding:10px"> 
+									<%= f.input :message, label: false, placeholder: 'MENSAJE', input_html: { class: 'input-contact-text-area col-md-12', required: true, :"parsley-maxlength" => "250" } %>
+								</div>
+
+								<div class="row-fluid">
+									<%= f.submit "Send",:class => " btn col-md-2 float-right" %>
+								</div>
+								
+			    		<% end %>
+				    	<div class="row-fluid" id="sucess_contact_form" style="display:none">
+							<span class="icono-ok glyphicon glyphicon-ok" aria-hidden="true"></span>
+							<H6>Hemos recibido tu mensaje satisfactoriamente, estaremos en contacto en breve! <H6>
+						</div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render 'layouts/fotter' %></div>
+
+<div id="template_for_text_1" class="hide_div">
+	<h1>Creacion de su Sitio Web </h1>
+
+	El primer paso para rentabilizar tu sitio web es reflexionar sobre lo que esperas de él y
+	definir su propósito.
+	En el99% de las ocasiones un sitio web es una herramienta para cumplir los objetivos
+	de negocio, es decir:
+	
+	<ul>
+		<li>Aumentar las ventas.</li>
+		<li>Reducir los costes.</li>
+		<li>Incrementar la satisfacción del cliente..</li>
+	</ul>
+
+	Por lo tanto, los objetivos de tu sitio web deberían estar relacionados, cómo mínimo, con
+	uno de ellos. 
+</div>
+
+<div id="template_for_text_2" class="hide_div">
+	<h2>¿Para qué sirve una página web? </h2>
+
+	Una página web, puede tener varios usos, se le puede usar como medio de comunicación para diversos temas, como noticias, cultura, medicina, ciencia, tecnología, comentarios de diversos temas, foros, educación, debate, juegos, música, películas, etc. <br/>
+
+	Por la peculiaridad, de ser versátiles en los tipos de información que se le puede añadir a una página web.<br/>
+
+	Sirve a las empresas en distintas formas, por ejemplo, para dar a conocer los bienes y servicios que presta alguna determinada empresa, los precios y costos de los mismos bienes y servicios, o las direcciones en  las localidades en donde se puede obtener algún servicio de alguna empresa determinada.<br/>
+
+	Sirve en el comercio de distintos productos, los cuales son anunciados en distintas páginas web.<br/>
+</div>
+
+<div id="template_for_text_3" class="hide_div">
+	<h2>¿Necesitas soporte freelance? </h2>
+	
+	Con nosotros tendras ese servicio el cual se adapta a tus necesidades para tu negocio,desde una instalacion primaria hasta un soporte permanente para tu pagina web con servicio todos los dias de la semana, contactanos para mayores informes.
+</div>
+
+<div id="template_for_text_4" class="hide_div">
+	<h2>¿Tienes un sitio web y deseas actualizarlo? </h2>
+	
+	Mantener tu sitio web actualizado es una  manera segura de que tu página sea muy visitada, nuestro contenido y como lo administremos es la clave para el éxito de nuestro sitio web. Es necesario estar renovando y cambiando nuestro contenido para que las personas que nos visitan  no sientan que la información que les estamos dando ya pasó y no corresponde a lo que verdaderamente necesitan. 
+
+	Si ya cuentas con un sitio web, pero deseas actualizarlo alas nuevas tecnologias del mercado con nosotros te brindamos ese servicio, no cobramos la migracion, solo pagas la actualizacion del sitio, satisfaccion del cliente de 30 dias!.
+</div>
+
+<div id="template_for_text_5" class="hide_div">
+	<h2>¿Necesitas mejor pocicionamiento en los buscadores de internet? </h2>
+	Contactanos somos especialistas en SEO(search engine optimization) o en español (Optimización en Motores de Búsqueda)
+	Con el cual nosotros te daremos una evaluacion de tu sitio, en la cual te mostraremos dos tipos de variables:
+	<ul>
+		<li>Variables internas:
+		Consistes en modificar la estructura, texto, imágenes y algunos meta tag del sitio web.</li>
+		<li>Variables externas:
+		Las variables externas son factores que considera Google para posicionar un sitio web tales como la cantidad de enlaces que apuntan a éste, menciones en redes sociales, antiguedad del dominio y etc.</li>
+	</ul>
+	En MejorasWeb nos importa la satisfaccion del cliente, por eso si usted adquiere este servicio tendra 15 dias satisfaccion al cliente para que usted pueda ver los resultados y asi mismo comprobarlos.
+</div>
+
+<div id="template_for_box_sites" class="hide_div">
+	<div class="color_gray">
+		<div class="row-fluid text_center titles_for_second_page">
+			<h3 style="font-weight:lighter"> Quieres un Sitio web pero no tienes idea de que diseño va con tu negocio</h3>
+			<h4 style="font-weight:lighter">Visita Nuestras plantillas echas para ti y para tu negocio: </h4>
+		</div>
+		<div class="row-fluid" style="height:350px;">
+			<div class="col-md-4 box_template_sites" id="box_template_sites_1"onmouseOver="OnMouseHoverBoxTemplates(1)" onmouseOut="CreateAgainBox(1)">
+				<div class="row-fluid header_box_templates text_center header_1">
+					<h1 class="h1_box_templates">Sitio Web 1 </h1>
+				</div>
+				<div class="row-fluid content_change_controls content_change_controls_1 hide_div">
+					<div class="btn btn_box_templates" onclick="ChangeImgBoxTemplates1(1,false)">Anterior</div>
+					<div class="btn btn_box_templates pull_right"  onclick="ChangeImgBoxTemplates1(1,true)">Siguiente</div>
+				</div>
+				<div class="row-fluid row_content_1 row_boxes_hover_content hide_div" onclick="GoPage(1)">
+					
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<h4> Quieres combinar los diseños? </h4>
+		</div>
+		<div class="row-fluid">
+			<h4> Quieres personalizar tu diseño 100% </h4>
+		</div>
+		<div class="row-fluid">
+			<h4> Ponte en contacto con nosotros y definimos su plantilla personalizada</h4>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	count_image_1 =0;
+	var i =0; 
+		var images = ['oficce.jpg','saco.jpg','sala_conferencia.jpg','phone.jpg'];
+	  	var image = $('#page_load');
+	function imageload () {
+	
+	  	              //Initial Background image setup
+	  	image.css('background-image', 'url(/assets/phone.jpg)');
+	  	              //Change image at regular intervals
+	  	setInterval(function(){  
+	  	 image.fadeOut(1000, function () {
+	  	 image.css('background-image', 'url(/assets/' + images [i++] +')');
+  		 image.css('background-size', '100%');
+  		 image.css('background-repeat', 'no-repeat');
+	  	 image.fadeIn(1000);
+	  	 });
+	  	 if(i == images.length)
+	  	  i = 0;
+	  	}, 5000); 
+	}
+
+	imageload();
+	$("#btn_contact_form").click(function(event) {
+		$(".card").attr('style', 'transform: rotateY(180deg);');
+	});
+	function ChangeImgBoxTemplates1(class_div,next){
+		
+		if (next && count_image_1 < 5) {
+			$("#box_template_sites_"+class_div).attr('style', "background:url('http://www.yacutinga.com/galerias/gal-selva_1.jpg')");
+			count_image_1 = count_image_1 + 1;
+		}else if (!next){
+			if (count_image_1 > 0) {
+				count_image_1 = count_image_1 -1;
+				$("#box_template_sites_"+class_div).attr('style', 'background:red');
+			}
+		};
+	}
+
+	function GoPage(id_page){
+		window.open("http://localhost:3000/templates/" + id_page, '_blank');
+	}
+
+	$( document ).ready(function() {
+	    $('#page_load').parallax("50%", 0.7);
+		$("#second_page").parallax("50%",0.1);
+		$("#three_page").parallax("50%",0.1);
+	});
+
+	is_hover_box= false;
+	function OnMouseHoverBoxTemplates(id){
+		
+		if (!is_hover_box) {
+			$(".row_content_"+id).removeClass('hide_div');
+			// $(".row_content_"+id).fadeIn(1000)
+			$(".header_"+id).addClass('hide_div');
+			$(".row_content_"+id).html("Visitar esta plantilla");
+			$(".content_change_controls_1").removeClass('hide_div');
+			is_hover_box= true;
+		};
+	}
+
+	function CreateAgainBox (id) {
+		// $(".row_content_"+id).attr('style', 'display:none');/\
+		$(".row_content_"+id).addClass('hide_div');
+		$(".header_"+id).removeClass('hide_div');
+		$(".row_content_"+id).empty();
+		// $(".row_content_"+id).fadeOut(300)
+		$(".content_change_controls_"+id).addClass('hide_div');
+		
+		is_hover_box= false;
+	}
+	
+	$( "#index_for_page" ).fadeIn( 4500);
+
+	$( ".text-about" ).animate({
+	    width: ".col-md-6",
+	    opacity: 1,
+	    fontSize: "1.5em",
+	    borderWidth: "10px"
+	  }, 3000 );
+	
+	// function ChargeTextPackage(){
+	// 	top = 270;
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_1").removeClass('hide_div');
+	// 	}, 1000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_2").removeClass('hide_div');
+	// 	}, 3000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_3").removeClass('hide_div');
+	// 	}, 5000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_4").removeClass('hide_div');
+	// 	}, 7000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_5").removeClass('hide_div');
+	// 	}, 9000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_6").removeClass('hide_div');
+	// 	}, 11000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_7").removeClass('hide_div');
+	// 	}, 13000);
+	// 	setTimeout(function() {
+	// 		$(".delay_text_package_8").removeClass('hide_div');
+	// 	}, 15000);
+	// 	$(".delay_text_package_1").fadeIn(2000)
+	// 	.css({top:500,position:'absolute'})
+	// 	.animate({top:290}, 2000, function() {
+	// 	    //callback
+	// 	});
+
+	// 	$(".delay_text_package_2").fadeIn(3000)
+	// 	.css({top:500,position:'absolute'})
+	// 	.animate({top:320}, 3000, function() {
+	// 	    //callback
+	// 	});
+	// 	$(".delay_text_package_3").fadeIn(4000)
+	// 	.css({top:500,position:'absolute'})
+	// 	.animate({top:350}, 4000, function() {
+	// 	    //callback
+	// 	});
+	// 	$(".delay_text_package_4").fadeIn(5000)
+	// 	.css({top:500,position:'absolute'})
+	// 	.animate({top:380}, 5000, function() {
+	// 	    //callback
+	// 	});
+	// 	$(".delay_text_package_5").fadeIn(6000)
+	// 	.css({top:600,position:'absolute'})
+	// 	.animate({top:410}, 6000, function() {
+	// 	    //callback
+	// 	});
+	// 	$(".delay_text_package_6").fadeIn(7000)
+	// 	.css({top:700,position:'absolute'})
+	// 	.animate({top:440}, 7000, function() {
+	// 	    //callback
+	// 	});
+	// 	$(".delay_text_package_7").fadeIn(7000)
+	// 	.css({top:740,position:'absolute'})
+	// 	.animate({top:470}, 7000, function() {
+	// 	    //callback
+	// 	});
+	// 	$(".delay_text_package_8").fadeIn(7000)
+	// 	.css({top:800,position:'absolute'})
+	// 	.animate({top:510}, 8000, function() {
+	// 	    //callback
+	// 	});
+	// }
+	
+	function ChangeText(val) {
+		$("#text_change").fadeOut(1000);
+		$("#text_change").fadeIn( 1000);
+		html= $("#template_for_text_"+val).html();
+		$(".btn_change_text").removeClass('class btn_change_text_activate');
+		$(".btn_change_text_"+val).addClass('btn_change_text_activate')
+		setTimeout(function() {
+			$("#text_change").html(html);
+		}, 1000);
+		
+	}
+
+	setTimeout(function() {
+		$( ".delay_package" ).fadeIn(2000);
+		// ChargeTextPackage()
+		$(".dont_list_style").removeClass('hide_div')
+	}, 3000);
+	
+	is_show= false;
+
+ 	function ListenerScroll(){
+      a=$(window).scrollTop();
+      
+      if(a>500){
+      	if (!is_show) {
+      		
+      		$( ".slapsh_border" ).animate({
+			    height: "10px",
+			    opacity: 1,
+			  }, 5000 );
+			$(".second_text_work_slapsh").fadeIn(5000);
+			CreateSecondPage();
+			is_show = true;
+         };
+      }
+    }
+
+    function CreateSecondPage () {
+    	setTimeout(function() {
+    		$(".second_text_work_slapsh").fadeOut(2500);
+    		$(".slapsh_border").fadeOut(2500);
+    	}, 1000);
+
+    	setTimeout(function() {
+    		
+    		html = $("#template_for_box_sites").html();
+    		$('#content_second_page').html(html);
+    	}, 7500);
+    }
+     $(window).scroll(function() {
+     	ListenerScroll();
+     });
+
+    $('#contact_form').submit(function(event) {
+		if($('#contact_form').parsley("validate") == false)
+		{	
+			return false;
+		}
+	});
+
+	$("#contact_form").on('ajax:beforeSend', function(event, xhr, settings) {
+		if($('#contact_form').parsley("validate") == false) {
+			return false;
+		}
+	}).on("ajax:success", function(e, data, status, xhr) {
+      	if (data.success == 1) {
+      		$("#contact_form").fadeOut(500);
+      		$("#sucess_contact_form").fadeIn(1000);
+      	}
+      	else{
+      		console.log(data.message);
+      	};
+    }).on("ajax:error", function(e, xhr, status, error){
+    	console.log(xhr);
+	});
+	ChangeText(1)
+    $("#contact_site_phone_number").mask("(99) 9999-9999"); 
+</script>

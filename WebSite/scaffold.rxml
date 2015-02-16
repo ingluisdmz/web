@@ -1,0 +1,3 @@
+rails g model contact_site first_name:string last_name:string email:string company_name:string phone_number:string type_contact_id:integer message:text active:boolean
+
+rails g model type_contact name:string active:boolean
