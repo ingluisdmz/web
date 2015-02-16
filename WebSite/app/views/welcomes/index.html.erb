@@ -305,7 +305,7 @@
 	}
 
 	function GoPage(id_page){
-		window.open("http://localhost:3000/templates/" + id_page, '_blank');
+		window.open("<%= ENV["URL"]%>/templates/" + id_page, '_blank');
 	}
 
 	$( document ).ready(function() {
