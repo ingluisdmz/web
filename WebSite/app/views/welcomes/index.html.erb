@@ -268,7 +268,7 @@
 <script type="text/javascript">
 	count_image_1 =0;
 	var i =0; 
-		var images = ['oficce.jpg','saco.jpg','sala_conferencia.jpg','phone.jpg'];
+		var images = ["<%= image_path('oficce.jpg') %>","<%= image_path('saco.jpg') %>","<%= image_path('sala_conferencia.jpg') %>","<%= image_path('phone.jpg') %>"];
 	  	var image = $('#page_load');
 	function imageload () {
 	
@@ -277,7 +277,7 @@
 	  	              //Change image at regular intervals
 	  	setInterval(function(){  
 	  	 image.fadeOut(1000, function () {
-	  	 image.css('background-image', 'url(/assets/' + images [i++] +')');
+	  	 image.css('background-image', 'url('+images [i++]+')');
   		 image.css('background-size', '100%');
   		 image.css('background-repeat', 'no-repeat');
 	  	 image.fadeIn(1000);
