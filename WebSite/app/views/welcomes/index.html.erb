@@ -122,23 +122,23 @@
 			    		<%= simple_form_for(@contact_sites,:url => welcomes_path,:remote => true,:format => :json, :html => {:"data-parsley-validate" => 'true', :multipart => true, :id => "contact_form",:class => "row-fluid"}) do |f| %>
 
 								<div class="col-md-6">
-								   	<%= f.input :first_name,:required => true, label: false, placeholder: 'NOMBRE', input_html: { class: 'input-contact col-md-12', :"parsley-maxlength" => "60" } %>
+								   	<%= f.input :first_name,:required => true, label: false, placeholder: 'NOMBRE', input_html: { class: 'input-contact col-md-12' } %>
 								</div>
 								
 								<div class="col-md-6">
-							   	<%= f.input :last_name, label: false,:required => true, placeholder: 'Apellido', input_html: { class: 'input-contact col-md-12', :"parsley-maxlength" => "30" } %>
+							   	<%= f.input :last_name, label: false,:required => true, placeholder: 'Apellido', input_html: { class: 'input-contact col-md-12' } %>
 							   	</div>
 
 						   		<div class="col-md-6">
-									<%= f.input :email, label: false, placeholder: 'Correo Electronico', input_html: { class: 'input-contact col-md-12', required: true, :"parsley-maxlength" => "30" } %>
+									<%= f.input :email, label: false, placeholder: 'Correo Electronico', input_html: { class: 'input-contact col-md-12', required: true } %>
 								</div>
 
 								<div class="col-md-6">
-							   		<%= f.input :company_name, label: false, placeholder: 'Empresa', input_html: { class: 'input-contact col-md-12', required: true, :"parsley-maxlength" => "20" } %>
+							   		<%= f.input :company_name, label: false, placeholder: 'Empresa', input_html: { class: 'input-contact col-md-12', required: true} %>
 							    </div>
 
 							    <div class="col-md-6">
-							   		<%= f.input :phone_number, label: false, placeholder: 'Numero Tel', input_html: { class: 'input-contact col-md-12', required: true, :"parsley-maxlength" => "20",:type =>"tel" } %>
+							   		<%= f.input :phone_number, label: false, placeholder: 'Numero Tel', input_html: { class: 'input-contact col-md-12', required: true,:type =>"tel" } %>
 							   	</div>
 
 							   	<div class="col-md-6">
@@ -154,7 +154,7 @@
 						    	</div>
 
 								<div class="row-fluid" style="padding:10px"> 
-									<%= f.input :message, label: false, placeholder: 'MENSAJE', input_html: { class: 'input-contact-text-area col-md-12', required: true, :"parsley-maxlength" => "250" } %>
+									<%= f.input :message, label: false, placeholder: 'MENSAJE', input_html: { class: 'input-contact-text-area col-md-12', required: true } %>
 								</div>
 
 								<div class="row-fluid">
@@ -164,7 +164,7 @@
 			    		<% end %>
 				    	<div class="row-fluid" id="sucess_contact_form" style="display:none">
 							<span class="icono-ok glyphicon glyphicon-ok" aria-hidden="true"></span>
-							<H6>Hemos recibido tu mensaje satisfactoriamente, estaremos en contacto en breve! <H6>
+							<H6>Hemos recibido tu mensaje satisfactoriamente, estaremos en contacto en breve! </H6>
 						</div>
 				    </div>
 				  </div>
@@ -181,7 +181,7 @@
 
 	El primer paso para rentabilizar tu sitio web es reflexionar sobre lo que esperas de él y
 	definir su propósito.
-	En el99% de las ocasiones un sitio web es una herramienta para cumplir los objetivos
+	En el 99% de las ocasiones un sitio web es una herramienta para cumplir los objetivos
 	de negocio, es decir:
 	
 	<ul>
@@ -240,7 +240,7 @@
 			<h4 style="font-weight:lighter">Visita Nuestras plantillas echas para ti y para tu negocio: </h4>
 		</div>
 		<div class="row-fluid" style="height:350px;">
-			<div class="col-md-4 box_template_sites" id="box_template_sites_1"onmouseOver="OnMouseHoverBoxTemplates(1)" onmouseOut="CreateAgainBox(1)">
+			<div class="col-md-4 box_template_sites" id="box_template_sites_1" onmouseOver="OnMouseHoverBoxTemplates(1)" onmouseOut="CreateAgainBox(1)">
 				<div class="row-fluid header_box_templates text_center header_1">
 					<h1 class="h1_box_templates">Sitio Web 1 </h1>
 				</div>
