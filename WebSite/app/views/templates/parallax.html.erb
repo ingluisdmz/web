@@ -1,15 +1,50 @@
-<ul id="nav_parallax">
-	<li><a href="#intro_parallax" title="Next Section"><%= image_tag "ball.png" ,:alt =>"parallax"%></a></li>
-    <li><a href="#second_parallax" title="Next Section"><%= image_tag "ball.png" ,:alt =>"parallax"%></a></li>
-    <li><a href="#third_parallax" title="Next Section"><%= image_tag "ball.png" ,:alt =>"parallax"%></a></li>
-    <li><a href="#fifth_parallax" title="Next Section"><%= image_tag "ball.png" ,:alt =>"parallax"%></a></li>
-</ul>
+<div class="row-fluid" id="nav">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">Bienvenido</div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active menu_item" id="intro_btn"> 
+            <a  href="#intro_parallax">Boton Ejemplo</a>
+          </li>
+          <li id="second_btn" class="menu_item" ><a href="#second_parallax">Boton Ejemplo</a></li>
+          <li id="three_btn" class="menu_item" ><a href="#second_parallax">Boton Ejemplo</a></li>
+          <li id="four_btn" class="menu_item" ><a href="#second_parallax">Boton Ejemplo</a></li>
+        </ul>
+        <ul class="nav navbar-nav ">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
 
 <div id="intro_parallax">
 	<div class="story">
     	<div class="float-left">
-		<h2>(Almost) Static Background</h2>
-        <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+		<h2>Imagenes de fondo Statico</h2>
+        <p>La primera seccion del sitio, donde se da la bienvenida a nuestros clientes </p>
         </div>
     </div> <!--.story-->
 </div> <!--#intro-->
@@ -17,8 +52,8 @@
 <div id="second_parallax">
 	<div class="story"><div class="bg"></div>
     	<div class="float-right">
-            <h2>Multiple Backgrounds</h2>
-            <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
+            <h2>Multiples Fondos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
         </div>
     </div>
@@ -28,8 +63,8 @@
 <div id="third_parallax">
 	<div class="story">
     	<div class="float-left">
-        	<h2>What Happens When JavaScript is Disabled?</h2>
-            <p>The user gets a slap! Actually, all that jQuery does is moves the backgrounds relative to the position of the scrollbar. Without it, the backgrounds simply stay put and the user would never know they are missing out on the awesome! CSS2 does a good enough job to still make the effect look cool.</p>
+        	<h2>Seccion de muestra</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
         </div>
     </div> <!--.story-->
 </div> 
@@ -39,6 +74,47 @@
 	    <footer>
 		  <p>Facebook</p>
 		  <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
 		</footer>
     </div> 
 </div> 
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#nav_parallax').localScroll(800);
+        $('#intro_parallax').parallax("50%", 0.1);
+        $('#second_parallax').parallax("50%", 0.1);
+        $('.bg').parallax("50%", 0.4);
+        $('#third_parallax').parallax("50%", 0.3);
+
+    })
+    $('#nav').localScroll(800);
+    $(".menu_item").click(function(event) {
+        $(".menu_item").removeClass('active');
+        $(event.currentTarget).addClass('active');
+    });
+
+    $("#intro_btn").click(function() {
+        $('html, body').animate({
+          scrollTop: $("#intro_parallax").offset().top
+        }, 2000);
+    });
+
+    $("#second_btn").click(function() {
+        $('html, body').animate({
+          scrollTop: $("#second_parallax").offset().top
+        }, 2000);
+    });
+
+    $("#three_btn").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#third_parallax").offset().top
+        }, 2000);
+    });
+
+    $("#four_btn").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#fifth_parallax").offset().top
+        }, 2000);
+    });
+</script>

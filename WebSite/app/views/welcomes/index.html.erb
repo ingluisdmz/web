@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="row-fluid" style="margin-top:3em;">
 			<div class="col-md-6 ">
-				<div class="delay_package" style="display:none">
+				<div class="delay_package text_sale_web" style="display:none">
 					<h1 class="row-fluid">
 						Sitio web 
 					</h1>
@@ -266,31 +266,41 @@
 </div>
 
 <script type="text/javascript">
+	// $( document ).ready(function() {
+		$('#nav').localScroll(100);
+	    $('#page_load').parallax("50%", 0.7,false);
+		// $("#second_page").parallax("50%",0.1,false);
+		$("#three_page").parallax("50%",0.1,false);
+	// });
+
+	$( "#index_for_page" ).fadeIn(4000);
+
 	count_image_1 =0;
 	var i =0; 
-		var images = ["<%= image_path('oficce.jpg') %>","<%= image_path('saco.jpg') %>","<%= image_path('sala_conferencia.jpg') %>","<%= image_path('phone.jpg') %>"];
-	  	var image = $('#page_load');
+	var images = ["<%= image_path('oficce.jpg') %>","<%= image_path('saco.jpg') %>","<%= image_path('sala_conferencia.jpg') %>","<%= image_path('phone.jpg') %>"];
+	image = $('#page_load');
 	function imageload () {
-	
-	  	              //Initial Background image setup
+      	//Initial Background image setup
 	  	image.css('background-image', "url(<%= image_path('phone.jpg') %>)");
-	  	              //Change image at regular intervals
+      	//Change image at regular intervals
 	  	setInterval(function(){  
-	  	 image.fadeOut(1000, function () {
-	  	 image.css('background-image', 'url('+images [i++]+')');
-  		 image.css('background-size', '100%');
-  		 image.css('background-repeat', 'no-repeat');
-	  	 image.fadeIn(1000);
-	  	 });
-	  	 if(i == images.length)
-	  	  i = 0;
-	  	}, 5000); 
+			image.fadeOut(1000, function () {
+				image.css('background-image', 'url('+images [i++]+')');
+				image.css('background-size', '100%');
+				image.css('background-repeat', 'no-repeat');
+				image.fadeIn(1000);
+			});
+
+			if(i == images.length) i = 0;
+	  	}, 7000); 
 	}
 
 	imageload();
+
 	$("#btn_contact_form").click(function(event) {
-		$(".card").attr('style', 'transform: rotateY(180deg);');
+		$(".card").attr('style', '-webkit-transform: rotateY(180deg);transform: rotateY(180deg);');
 	});
+
 	function ChangeImgBoxTemplates1(class_div,next){
 		
 		if (next && count_image_1 < 5) {
@@ -308,13 +318,8 @@
 		window.open("<%= ENV["URL"]%>/templates/" + id_page, '_blank');
 	}
 
-	$( document ).ready(function() {
-	    $('#page_load').parallax("50%", 0.7);
-		$("#second_page").parallax("50%",0.1);
-		$("#three_page").parallax("50%",0.1);
-	});
-
 	is_hover_box= false;
+
 	function OnMouseHoverBoxTemplates(id){
 		
 		if (!is_hover_box) {
@@ -337,8 +342,6 @@
 		
 		is_hover_box= false;
 	}
-	
-	$( "#index_for_page" ).fadeIn( 4500);
 
 	$( ".text-about" ).animate({
 	    width: ".col-md-6",
@@ -346,75 +349,6 @@
 	    fontSize: "1.5em",
 	    borderWidth: "10px"
 	  }, 3000 );
-	
-	// function ChargeTextPackage(){
-	// 	top = 270;
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_1").removeClass('hide_div');
-	// 	}, 1000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_2").removeClass('hide_div');
-	// 	}, 3000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_3").removeClass('hide_div');
-	// 	}, 5000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_4").removeClass('hide_div');
-	// 	}, 7000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_5").removeClass('hide_div');
-	// 	}, 9000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_6").removeClass('hide_div');
-	// 	}, 11000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_7").removeClass('hide_div');
-	// 	}, 13000);
-	// 	setTimeout(function() {
-	// 		$(".delay_text_package_8").removeClass('hide_div');
-	// 	}, 15000);
-	// 	$(".delay_text_package_1").fadeIn(2000)
-	// 	.css({top:500,position:'absolute'})
-	// 	.animate({top:290}, 2000, function() {
-	// 	    //callback
-	// 	});
-
-	// 	$(".delay_text_package_2").fadeIn(3000)
-	// 	.css({top:500,position:'absolute'})
-	// 	.animate({top:320}, 3000, function() {
-	// 	    //callback
-	// 	});
-	// 	$(".delay_text_package_3").fadeIn(4000)
-	// 	.css({top:500,position:'absolute'})
-	// 	.animate({top:350}, 4000, function() {
-	// 	    //callback
-	// 	});
-	// 	$(".delay_text_package_4").fadeIn(5000)
-	// 	.css({top:500,position:'absolute'})
-	// 	.animate({top:380}, 5000, function() {
-	// 	    //callback
-	// 	});
-	// 	$(".delay_text_package_5").fadeIn(6000)
-	// 	.css({top:600,position:'absolute'})
-	// 	.animate({top:410}, 6000, function() {
-	// 	    //callback
-	// 	});
-	// 	$(".delay_text_package_6").fadeIn(7000)
-	// 	.css({top:700,position:'absolute'})
-	// 	.animate({top:440}, 7000, function() {
-	// 	    //callback
-	// 	});
-	// 	$(".delay_text_package_7").fadeIn(7000)
-	// 	.css({top:740,position:'absolute'})
-	// 	.animate({top:470}, 7000, function() {
-	// 	    //callback
-	// 	});
-	// 	$(".delay_text_package_8").fadeIn(7000)
-	// 	.css({top:800,position:'absolute'})
-	// 	.animate({top:510}, 8000, function() {
-	// 	    //callback
-	// 	});
-	// }
 	
 	function ChangeText(val) {
 		$("#text_change").fadeOut(1000);
@@ -439,14 +373,14 @@
  	function ListenerScroll(){
       a=$(window).scrollTop();
       
-      if(a>500){
+      if(a >500){
       	if (!is_show) {
       		
       		$( ".slapsh_border" ).animate({
 			    height: "10px",
 			    opacity: 1,
 			  }, 5000 );
-			$(".second_text_work_slapsh").fadeIn(5000);
+			$(".second_text_work_slapsh").fadeIn(500);
 			CreateSecondPage();
 			is_show = true;
          };
@@ -454,20 +388,18 @@
     }
 
     function CreateSecondPage () {
-    	setTimeout(function() {
-    		$(".second_text_work_slapsh").fadeOut(2500);
-    		$(".slapsh_border").fadeOut(2500);
-    	}, 1000);
+    	$(".second_text_work_slapsh").fadeOut(500);
+		$(".slapsh_border").fadeOut(500);
 
     	setTimeout(function() {
-    		
     		html = $("#template_for_box_sites").html();
     		$('#content_second_page').html(html);
-    	}, 7500);
+    	}, 2000);
     }
-     $(window).scroll(function() {
-     	ListenerScroll();
-     });
+
+	$(window).scroll(function() {
+		ListenerScroll();
+	});
 
     $('#contact_form').submit(function(event) {
 		if($('#contact_form').parsley("validate") == false)
