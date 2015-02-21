@@ -5,7 +5,41 @@ body{
 	background:rgb(53,24,30);
 	font-family: 'Helvetica Neue','HelveticaNeue-Light', 'Helvetica Neue Light', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
+@media (min-width: 100px) and (max-width: 974px) {
+	.first_page_index{
+		/*background:url(/assets/phone.jpg) 50% 0 no-repeat fixed;*/
+		background-size:100%;
+		display:none;
+		position:relative;
+		height: auto !important;
+		margin-bottom: 3em;
+	}
 
+	#second_page{
+		position:relative;
+		height: auto !important;
+		margin-bottom: 3em;
+	}
+
+	#three_page{
+		background-image:url(image_path('contacto.jpg')) !important;
+		/*height: auto !important;*/
+		color:gray;
+		background-size:100% 100% !important;
+		margin-bottom:0 !important;
+	}
+	body{
+		background:rgb(53,24,30);
+		font-family: 'Helvetica Neue','HelveticaNeue-Light', 'Helvetica Neue Light', Helvetica, Arial, 'Lucida Grande', sans-serif;
+		text-align: center;
+	}
+	.delay_package{
+		margin-top: 0 !important;
+		color:#e3e3e3;
+		font-size:22px; 
+	}
+	
+}
 .fotos{
 	width:100%;
 	height: 100%;
@@ -152,12 +186,16 @@ body{
 .pull_right{
 	float:right
 }
+.pull_left{
+	float:left;
+}
 .content_change_controls{
 	position: relative;
 	top:40%;
 }
 .btn_box_templates{
 	background: #e3e3e3;
+
 }
 .color_gray{
 	color:gray;
@@ -355,4 +393,8 @@ button:active {
 	background: #282934;
 	padding-top: .5em;
 	color:rgba(255,255,255,0.6);
+}
+.btn_mobile{
+	border-radius: 3px;
+	border:1px solid rgba(255,255,255,0.6);
 }
